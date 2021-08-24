@@ -4,7 +4,7 @@ def Encrpty(sentence):
 
     # Encrypting Message
     for letter in sentence:
-        crpted_letters = ord(letter)
+        crpted_letters = ord(letter) * 20
         result.append(crpted_letters)
 
     print("Encrypted Message ")
@@ -23,7 +23,7 @@ def Decrpt(result):
     result_decrypted = []
     # Decrypting Message
     for letter in result:
-        words = int(letter)
+        words = int((letter))//20
         numbers_to_letter.append(words)
 
     print("'\n'")
@@ -39,9 +39,6 @@ def Decrpt(result):
 def Main():
     userWords = input("Enter sentence to be encrpted ")
     Encrpty(userWords)
-
-    # Resolve encryption
-    Decrpt(userWords)
 
 
 if __name__ == "__main__":
